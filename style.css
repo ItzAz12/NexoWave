@@ -389,3 +389,166 @@ section h2{
     text-decoration:none;
     font-weight:600;
 }
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:var(--gray);
+    margin-top:60px;
+}
+
+/* ==========================
+   SCROLL ANIMATION
+========================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ==========================
+   GLOW EFFECT
+========================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:rgba(31,107,255,.15);
+    border-radius:50%;
+    filter:blur(140px);
+    top:-180px;
+    left:-180px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:rgba(31,107,255,.08);
+    border-radius:50%;
+    filter:blur(150px);
+    bottom:-200px;
+    right:-180px;
+    z-index:-1;
+}
+
+/* ==========================
+   HOVER EFFECTS
+========================== */
+
+.card,
+.member,
+.review,
+.stat,
+.about,
+.contact{
+    transition:.35s ease;
+}
+
+.card:hover,
+.member:hover,
+.review:hover,
+.stat:hover{
+    box-shadow:0 0 35px rgba(31,107,255,.25);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+nav{
+    position:fixed;
+    top:90px;
+    right:-100%;
+    width:270px;
+    background:#090909;
+    flex-direction:column;
+    padding:30px;
+    border-radius:20px;
+    transition:.35s;
+}
+
+nav.active{
+    right:20px;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.about,
+.contact{
+    padding:35px;
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+    padding:16px 20px;
+}
+
+.logo span{
+    font-size:1.2rem;
+}
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+section{
+    padding:80px 6%;
+}
+
+section h2{
+    font-size:2rem;
+}
+
+.card,
+.review,
+.member,
+.stat{
+    padding:25px;
+}
+
+.contact input,
+.contact textarea,
+.contact button{
+    font-size:.95rem;
+}
+
+}
+
+/* ==========================
+   END
+========================== */
